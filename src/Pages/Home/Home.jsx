@@ -11,6 +11,8 @@ import { db } from "../../firebase-config"
 import { collection, getDocs, addDoc } from "firebase/firestore"
 import { Flip, toast } from "react-toastify";
 import { useRef } from 'react';
+import MissionState from '../../Components/MissionState';
+import BoardMembers from '../../Components/BoardMembers';
 
 
 let count = 0;
@@ -109,11 +111,13 @@ const Home = () => {
             </div>
             <section className='section-2'>
                 <div className="subscribe-window">
+                    <MissionState/>
 
                 <iframe width="860" height="615" src="https://www.youtube.com/embed/7wwHXsP4Ha0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 svg road map 
                 mission 
                 board
+                <BoardMembers/>
                     {/* <div className="card-sub">
                         <div className="texts">
                             <h2>More Coming Soon</h2>
